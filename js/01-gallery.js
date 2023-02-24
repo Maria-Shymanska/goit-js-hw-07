@@ -46,24 +46,24 @@ function onGalleryItemsClick(evt) {
   instance = basicLightbox.create(
     `<img src="${evt.target.dataset.source}" width="800" height="600">`,
     {
-      onShowUp,
+      onShow,
     }
   );
 
   instance.show();
 }
 
-function onShowUp() {
+function onShow() {
   window.addEventListener("keydown", onEscPress);
 }
 
-function onCloseUp() {
+function onClose() {
   window.removeEventListener("keydown", onEscPress);
 }
 
 function onEscPress(evt) {
   if (evt.code === "Escape") {
     instance.close();
-    onCloseUp();
+    onClose();
   }
 }
