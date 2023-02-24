@@ -11,9 +11,9 @@ import { galleryItems } from "./gallery-items.js";
 // console.log(galleryItems);
 
 const galleryContainerUp = document.querySelector(".gallery");
-const markupList = createGalleryMark(galleryItems);
+const cardsMarkup = createGalleryMark(galleryItems);
 
-galleryContainerUp.insertAdjacentHTML("afterbegin", markupList);
+galleryContainerUp.insertAdjacentHTML("afterbegin", cardsMarkup);
 galleryContainerUp.addEventListener("click", onGalleryItemsClick);
 
 function createGalleryMark(galleryItems) {
